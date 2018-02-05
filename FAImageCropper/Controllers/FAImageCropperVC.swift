@@ -17,6 +17,14 @@ class FAImageCropperVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var btnZoom: UIButton!
     @IBOutlet weak var btnCrop: UIButton!
+  
+  
+    var currentAsset: PHAsset?
+    var currentImageRequestID: PHImageRequestID?
+    var isOnDownloadingImage: Bool = true
+  
+  
+  
     @IBAction func zoom(_ sender: Any) {
         scrollView.zoom()
     }
@@ -54,6 +62,7 @@ class FAImageCropperVC: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        print("did receive memory warning")
         // Dispose of any resources that can be recreated.
     }
     
@@ -139,7 +148,8 @@ class FAImageCropperVC: UIViewController {
 
     private func selectDefaultImage(){
         collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .top)
-        selectImageFromAssetAtIndex(index: 0)
+        //selectImageFromAssetAtIndex(index: 0)
+      downloadSelectImageFromAssetAtIndex(index: 0)
     }
     
     
@@ -171,16 +181,100 @@ class FAImageCropperVC: UIViewController {
         else { return false }
     }
 
-    
+    override  public var prefersStatusBarHidden : Bool {
+      
+      return true
+    }
+  
     // MARK: Public Functions
 
     func selectImageFromAssetAtIndex(index:NSInteger){
-        
-        FAImageLoader.imageFrom(asset: photos[index], size: PHImageManagerMaximumSize) { (image) in
+      
+      FAImageLoader.imageFrom(asset: photos[index], size: PHImageManagerMaximumSize) { (image) in
             DispatchQueue.main.async {
                 self.displayImageInScrollView(image: image)
             }
         }
+      
+    }
+  
+  
+    func cancelDownloadInProgess(){
+      
+      if currentImageRequestID != nil {
+        PHImageManager.default().cancelImageRequest(self.currentImageRequestID!)
+      }
+      
+    }
+  
+    func downloadSelectImageFromAssetAtIndex(index:NSInteger){
+      
+      self.cancelDownloadInProgess()
+      
+      currentAsset = photos[index]
+      
+      let targetSize = CGSize(width: (currentAsset?.pixelWidth)!, height: (currentAsset?.pixelHeight)!)
+      
+      PHImageManager.default().requestImage(for: currentAsset!, targetSize: targetSize, contentMode: .aspectFill, options: nil) { (image, info) in
+        //self.displayImageInScrollView(image: image!)
+        
+        DispatchQueue.main.async {
+          if image != nil {
+            self.displayImageInScrollView(image: image!)
+          }
+        }
+      }
+   
+      
+      //self.selectImageFromAssetAtIndex(index: index)
+      
+      isOnDownloadingImage = true
+      
+      let requestOptions = PHImageRequestOptions()
+      requestOptions.isNetworkAccessAllowed = true
+      requestOptions.isSynchronous = false
+      requestOptions.deliveryMode = .highQualityFormat
+      
+      requestOptions.progressHandler = {(progress, err, pointer, info) in
+        
+        DispatchQueue.main.async {
+          
+          //if self.progressView.isHidden {
+          //  self.progressView.isHidden = false
+          //}
+          
+          //self.progressView.progress = CGFloat(progress)
+          
+          if progress == 1.0 {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.3, execute: {
+              //self.progressView.progress = 0.0
+              //self.progressView.isHidden = true
+            })
+          }
+        }
+        print("progress \(progress)")
+      }
+      
+      DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
+        
+        self.currentImageRequestID = PHImageManager.default().requestImage(for: self.currentAsset!, targetSize: PHImageManagerMaximumSize, contentMode: .aspectFill, options: requestOptions) { (image, info) in
+          
+          
+          if let isInCloud = info?[PHImageResultIsInCloudKey] as? Bool {
+            self.isOnDownloadingImage = isInCloud
+          }
+          
+          if image != nil {
+            DispatchQueue.main.async {
+              self.displayImageInScrollView(image: image!)
+            }
+          }
+        }
+        
+        
+      }
+      
+      
     }
     
     func displayImageInScrollView(image:UIImage){
@@ -218,7 +312,7 @@ class FAImageCropperVC: UIViewController {
             
             if scrollView.frame.contains(location) {
                 collectionView.selectItem(at: indexPathOfImageViewToDrag, animated: true, scrollPosition: UICollectionViewScrollPosition.centeredVertically)
-              selectImageFromAssetAtIndex(index: indexPathOfImageViewToDrag.item)
+              downloadSelectImageFromAssetAtIndex(index: indexPathOfImageViewToDrag.item)
             }
             
             imageViewToDrag.removeFromSuperview()
@@ -257,7 +351,8 @@ extension FAImageCropperVC:UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell:FAImageCell = collectionView.cellForItem(at: indexPath) as! FAImageCell
         cell.isSelected = true
-        selectImageFromAssetAtIndex(index: indexPath.item)
+        //selectImageFromAssetAtIndex(index: indexPath.item)
+        downloadSelectImageFromAssetAtIndex(index: indexPath.item)
     }
 }
 
