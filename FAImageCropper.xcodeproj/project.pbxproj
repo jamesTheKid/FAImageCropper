@@ -16,6 +16,7 @@
 		1AC0195E2028D2210069707C /* FAImageCropperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019572028D2210069707C /* FAImageCropperVC.swift */; };
 		1AC019612028DC150069707C /* FACameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019602028DC150069707C /* FACameraView.swift */; };
 		1AC019632028DC3B0069707C /* FACameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC019622028DC3B0069707C /* FACameraView.xib */; };
+		1AC019652029072C0069707C /* FACameraView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019642029072C0069707C /* FACameraView+Additions.swift */; };
 		290399801E411D9500CC0C20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2903997F1E411D9500CC0C20 /* AppDelegate.swift */; };
 		290399851E411D9500CC0C20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 290399831E411D9500CC0C20 /* Main.storyboard */; };
 		290399871E411D9500CC0C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 290399861E411D9500CC0C20 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		1AC019572028D2210069707C /* FAImageCropperVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAImageCropperVC.swift; sourceTree = "<group>"; };
 		1AC019602028DC150069707C /* FACameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FACameraView.swift; sourceTree = "<group>"; };
 		1AC019622028DC3B0069707C /* FACameraView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FACameraView.xib; sourceTree = "<group>"; };
+		1AC019642029072C0069707C /* FACameraView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FACameraView+Additions.swift"; sourceTree = "<group>"; };
 		2903997C1E411D9500CC0C20 /* FAImageCropper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FAImageCropper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2903997F1E411D9500CC0C20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		290399841E411D9500CC0C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				1AC019602028DC150069707C /* FACameraView.swift */,
+				1AC019642029072C0069707C /* FACameraView+Additions.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				1AC0195C2028D2210069707C /* FAImageCell.swift in Sources */,
 				2965F1261EE1B42B001F1B5A /* README.md in Sources */,
 				290399801E411D9500CC0C20 /* AppDelegate.swift in Sources */,
+				1AC019652029072C0069707C /* FACameraView+Additions.swift in Sources */,
 				1AC0195E2028D2210069707C /* FAImageCropperVC.swift in Sources */,
 				1AC019582028D2210069707C /* FAImageLoader.swift in Sources */,
 				1AC0195B2028D2210069707C /* FAScrollView.swift in Sources */,

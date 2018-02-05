@@ -48,12 +48,13 @@ class FAImageCropperVC: UIViewController {
     var indexPathOfImageViewToDrag: IndexPath!
     
     let cellWidth = ((UIScreen.main.bounds.size.width)/3)-1
-    
+  
+    var croppedImage: UIImage? = nil
     
     // MARK: Private Properties
     
     private let imageLoader = FAImageLoader()
-    private var croppedImage: UIImage? = nil
+    //private var croppedImage: UIImage? = nil
 
     
     
@@ -199,6 +200,30 @@ class FAImageCropperVC: UIViewController {
         return cropped
 
     }
+  
+    func reziseCameraImage(image: UIImage) -> UIImage{
+      
+      var croprect = CGRect.zero
+      let xOffset = image.size.width / scrollView.contentSize.width;
+      let yOffset = image.size.height / scrollView.contentSize.width;
+      
+      croprect.origin.x = scrollView.contentOffset.x * xOffset;
+      croprect.origin.y = scrollView.contentOffset.y * yOffset;
+      
+      let normalizedWidth = (scrollView?.frame.width)! / (scrollView?.contentSize.width)!
+      let normalizedHeight = (scrollView?.frame.height)! / (scrollView?.contentSize.height)!
+      
+      croprect.size.width = image.size.width * normalizedWidth
+      croprect.size.height = image.size.height * normalizedHeight
+      
+      let toCropImage = image.fixImageOrientation()
+      let cr: CGImage? = toCropImage.cgImage?.cropping(to: croprect)
+      let cropped = UIImage(cgImage: cr!)
+      
+      return cropped
+      
+    }
+  
     private func isSquareImage() -> Bool{
         let image = scrollView.imageToDisplay
         if image?.size.width == image?.size.height { return true }
@@ -402,7 +427,8 @@ extension FAImageCropperVC: UICollectionViewDelegate, FACameraViewDelegate{
 
   
     func didShotPhoto(image: UIImage, metaData: [String : Any]) {
-    
+      croppedImage = image
+      performSegue(withIdentifier: "FADetailViewSegue", sender: nil)
     }
   
 }
