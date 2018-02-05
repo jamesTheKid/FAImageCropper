@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AC019582028D2210069707C /* FAImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC0194A2028D2210069707C /* FAImageLoader.swift */; };
+		1AC019592028D2210069707C /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC0194C2028D2210069707C /* UIImage+Additions.swift */; };
+		1AC0195A2028D2210069707C /* FAGridView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC0194D2028D2210069707C /* FAGridView.xib */; };
+		1AC0195B2028D2210069707C /* FAScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC0194E2028D2210069707C /* FAScrollView.swift */; };
+		1AC0195C2028D2210069707C /* FAImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019522028D2210069707C /* FAImageCell.swift */; };
+		1AC0195D2028D2210069707C /* FADetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019562028D2210069707C /* FADetailVC.swift */; };
+		1AC0195E2028D2210069707C /* FAImageCropperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019572028D2210069707C /* FAImageCropperVC.swift */; };
 		290399801E411D9500CC0C20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2903997F1E411D9500CC0C20 /* AppDelegate.swift */; };
 		290399851E411D9500CC0C20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 290399831E411D9500CC0C20 /* Main.storyboard */; };
 		290399871E411D9500CC0C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 290399861E411D9500CC0C20 /* Assets.xcassets */; };
 		2903998A1E411D9500CC0C20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 290399881E411D9500CC0C20 /* LaunchScreen.storyboard */; };
 		290399951E411D9500CC0C20 /* FAImageCropperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290399941E411D9500CC0C20 /* FAImageCropperTests.swift */; };
 		290399A01E411D9500CC0C20 /* FAImageCropperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2903999F1E411D9500CC0C20 /* FAImageCropperUITests.swift */; };
-		292920851E537C0F00E64F49 /* FADetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292920841E537C0F00E64F49 /* FADetailVC.swift */; };
-		293130661E5229AE00A05606 /* FAGridView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 293130651E5229AE00A05606 /* FAGridView.xib */; };
 		2965F1261EE1B42B001F1B5A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2965F1251EE1B42B001F1B5A /* README.md */; };
-		297AE46C1E4F7E0D0014D705 /* FAImageCropperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297AE46B1E4F7E0D0014D705 /* FAImageCropperVC.swift */; };
-		297AE46F1E4FA0970014D705 /* FAImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297AE46E1E4FA0970014D705 /* FAImageLoader.swift */; };
-		297AE4791E4FE69F0014D705 /* FAImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297AE4771E4FE69F0014D705 /* FAImageCell.swift */; };
-		29A202081EE2CB6500FA7B8D /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A202071EE2CB6500FA7B8D /* UIImage+Additions.swift */; };
-		29E23C741E508CBC001F3E87 /* FAScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E23C731E508CBC001F3E87 /* FAScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AC0194A2028D2210069707C /* FAImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAImageLoader.swift; sourceTree = "<group>"; };
+		1AC0194C2028D2210069707C /* UIImage+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
+		1AC0194D2028D2210069707C /* FAGridView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAGridView.xib; sourceTree = "<group>"; };
+		1AC0194E2028D2210069707C /* FAScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAScrollView.swift; sourceTree = "<group>"; };
+		1AC019522028D2210069707C /* FAImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAImageCell.swift; sourceTree = "<group>"; };
+		1AC019562028D2210069707C /* FADetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FADetailVC.swift; sourceTree = "<group>"; };
+		1AC019572028D2210069707C /* FAImageCropperVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAImageCropperVC.swift; sourceTree = "<group>"; };
 		2903997C1E411D9500CC0C20 /* FAImageCropper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FAImageCropper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2903997F1E411D9500CC0C20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		290399841E411D9500CC0C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,15 +60,8 @@
 		2903999B1E411D9500CC0C20 /* FAImageCropperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FAImageCropperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2903999F1E411D9500CC0C20 /* FAImageCropperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAImageCropperUITests.swift; sourceTree = "<group>"; };
 		290399A11E411D9500CC0C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		292920841E537C0F00E64F49 /* FADetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FADetailVC.swift; sourceTree = "<group>"; };
-		293130651E5229AE00A05606 /* FAGridView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAGridView.xib; sourceTree = "<group>"; };
 		2965F1251EE1B42B001F1B5A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		297AE46B1E4F7E0D0014D705 /* FAImageCropperVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAImageCropperVC.swift; sourceTree = "<group>"; };
-		297AE46E1E4FA0970014D705 /* FAImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAImageLoader.swift; sourceTree = "<group>"; };
 		297AE4711E4FE2010014D705 /* FAImageCropper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FAImageCropper-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		297AE4771E4FE69F0014D705 /* FAImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAImageCell.swift; sourceTree = "<group>"; };
-		29A202071EE2CB6500FA7B8D /* UIImage+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
-		29E23C731E508CBC001F3E87 /* FAScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +89,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AC019492028D2210069707C /* FAUtility */ = {
+			isa = PBXGroup;
+			children = (
+				1AC0194A2028D2210069707C /* FAImageLoader.swift */,
+				1AC0194B2028D2210069707C /* Extension */,
+				1AC0194D2028D2210069707C /* FAGridView.xib */,
+				1AC0194E2028D2210069707C /* FAScrollView.swift */,
+			);
+			path = FAUtility;
+			sourceTree = "<group>";
+		};
+		1AC0194B2028D2210069707C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1AC0194C2028D2210069707C /* UIImage+Additions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1AC0194F2028D2210069707C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1AC019502028D2210069707C /* Cells */,
+				1AC019532028D2210069707C /* Stories */,
+				1AC019542028D2210069707C /* Ressources */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1AC019502028D2210069707C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1AC019512028D2210069707C /* FAImageCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1AC019512028D2210069707C /* FAImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				1AC019522028D2210069707C /* FAImageCell.swift */,
+			);
+			path = FAImageCell;
+			sourceTree = "<group>";
+		};
+		1AC019532028D2210069707C /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				290399831E411D9500CC0C20 /* Main.storyboard */,
+			);
+			path = Stories;
+			sourceTree = "<group>";
+		};
+		1AC019542028D2210069707C /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		1AC019552028D2210069707C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1AC019562028D2210069707C /* FADetailVC.swift */,
+				1AC019572028D2210069707C /* FAImageCropperVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		290399731E411D9400CC0C20 = {
 			isa = PBXGroup;
 			children = (
@@ -113,10 +182,10 @@
 		2903997E1E411D9500CC0C20 /* FAImageCropper */ = {
 			isa = PBXGroup;
 			children = (
+				1AC019552028D2210069707C /* Controllers */,
+				1AC019492028D2210069707C /* FAUtility */,
+				1AC0194F2028D2210069707C /* Views */,
 				290399AD1E411D9D00CC0C20 /* AppDelegate */,
-				297AE46D1E4FA0850014D705 /* FAUtility */,
-				290399AE1E411DB600CC0C20 /* Controllers */,
-				290399AF1E411DDF00CC0C20 /* Views */,
 				290399B01E411DFB00CC0C20 /* Other */,
 			);
 			path = FAImageCropper;
@@ -148,24 +217,6 @@
 			name = AppDelegate;
 			sourceTree = "<group>";
 		};
-		290399AE1E411DB600CC0C20 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				297AE46B1E4F7E0D0014D705 /* FAImageCropperVC.swift */,
-				292920841E537C0F00E64F49 /* FADetailVC.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		290399AF1E411DDF00CC0C20 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				297AE4751E4FE6000014D705 /* Cells */,
-				297AE4741E4FE5EC0014D705 /* Stories */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		290399B01E411DFB00CC0C20 /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,49 +226,6 @@
 				2903998B1E411D9500CC0C20 /* Info.plist */,
 			);
 			name = Other;
-			sourceTree = "<group>";
-		};
-		297AE46D1E4FA0850014D705 /* FAUtility */ = {
-			isa = PBXGroup;
-			children = (
-				29A202061EE2CB5000FA7B8D /* Extensions */,
-				297AE46E1E4FA0970014D705 /* FAImageLoader.swift */,
-				29E23C731E508CBC001F3E87 /* FAScrollView.swift */,
-				293130651E5229AE00A05606 /* FAGridView.xib */,
-			);
-			name = FAUtility;
-			sourceTree = "<group>";
-		};
-		297AE4741E4FE5EC0014D705 /* Stories */ = {
-			isa = PBXGroup;
-			children = (
-				290399831E411D9500CC0C20 /* Main.storyboard */,
-			);
-			name = Stories;
-			sourceTree = "<group>";
-		};
-		297AE4751E4FE6000014D705 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				297AE4761E4FE6150014D705 /* FAImageCell */,
-			);
-			name = Cells;
-			sourceTree = "<group>";
-		};
-		297AE4761E4FE6150014D705 /* FAImageCell */ = {
-			isa = PBXGroup;
-			children = (
-				297AE4771E4FE69F0014D705 /* FAImageCell.swift */,
-			);
-			name = FAImageCell;
-			sourceTree = "<group>";
-		};
-		29A202061EE2CB5000FA7B8D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				29A202071EE2CB6500FA7B8D /* UIImage+Additions.swift */,
-			);
-			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +296,7 @@
 				TargetAttributes = {
 					2903997B1E411D9400CC0C20 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 664343KK2F;
+						DevelopmentTeam = A54876SPW6;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -331,7 +339,7 @@
 			files = (
 				2903998A1E411D9500CC0C20 /* LaunchScreen.storyboard in Resources */,
 				290399871E411D9500CC0C20 /* Assets.xcassets in Resources */,
-				293130661E5229AE00A05606 /* FAGridView.xib in Resources */,
+				1AC0195A2028D2210069707C /* FAGridView.xib in Resources */,
 				290399851E411D9500CC0C20 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,14 +365,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29E23C741E508CBC001F3E87 /* FAScrollView.swift in Sources */,
-				297AE46F1E4FA0970014D705 /* FAImageLoader.swift in Sources */,
-				292920851E537C0F00E64F49 /* FADetailVC.swift in Sources */,
+				1AC0195C2028D2210069707C /* FAImageCell.swift in Sources */,
 				2965F1261EE1B42B001F1B5A /* README.md in Sources */,
 				290399801E411D9500CC0C20 /* AppDelegate.swift in Sources */,
-				29A202081EE2CB6500FA7B8D /* UIImage+Additions.swift in Sources */,
-				297AE4791E4FE69F0014D705 /* FAImageCell.swift in Sources */,
-				297AE46C1E4F7E0D0014D705 /* FAImageCropperVC.swift in Sources */,
+				1AC0195E2028D2210069707C /* FAImageCropperVC.swift in Sources */,
+				1AC019582028D2210069707C /* FAImageLoader.swift in Sources */,
+				1AC0195B2028D2210069707C /* FAScrollView.swift in Sources */,
+				1AC019592028D2210069707C /* UIImage+Additions.swift in Sources */,
+				1AC0195D2028D2210069707C /* FADetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,7 +525,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 664343KK2F;
+				DEVELOPMENT_TEAM = A54876SPW6;
 				INFOPLIST_FILE = FAImageCropper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FAImageCropper;
@@ -535,7 +543,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 664343KK2F;
+				DEVELOPMENT_TEAM = A54876SPW6;
 				INFOPLIST_FILE = FAImageCropper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FAImageCropper;
