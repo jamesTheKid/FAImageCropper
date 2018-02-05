@@ -37,7 +37,10 @@ class FAImageLoader: NSObject {
         options.isSynchronous = false
         options.deliveryMode = .highQualityFormat
         PHImageManager.default().requestImage(for: asset, targetSize: size, contentMode: .aspectFill, options: options, resultHandler: { (image, attributes) in
+          if image != nil {
             success(image!)
+          }
+          
           
         })
     }

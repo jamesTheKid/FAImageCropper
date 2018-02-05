@@ -9,6 +9,7 @@
 import UIKit
 
 class FAImageCropperVC: UIViewController {
+  
     
     // MARK: IBOutlets
     
@@ -18,12 +19,15 @@ class FAImageCropperVC: UIViewController {
     @IBOutlet weak var btnZoom: UIButton!
     @IBOutlet weak var btnCrop: UIButton!
   
+    @IBOutlet weak var globalScrollView: UIScrollView!
+    @IBOutlet weak var selectedAlbumButton: UIButton!
+    @IBOutlet weak var arrowImageView: UIImageView!
+    @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var librayButton: UIButton!
   
     var currentAsset: PHAsset?
     var currentImageRequestID: PHImageRequestID?
     var isOnDownloadingImage: Bool = true
-  
-  
   
     @IBAction func zoom(_ sender: Any) {
         scrollView.zoom()
@@ -36,7 +40,9 @@ class FAImageCropperVC: UIViewController {
     
     
     // MARK: Public Properties
-    
+  
+    let cameraView: FACameraView = FACameraView.instance()
+  
     var photos:[PHAsset]!
     var imageViewToDrag: UIImageView!
     var indexPathOfImageViewToDrag: IndexPath!
@@ -58,6 +64,8 @@ class FAImageCropperVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.\
         viewConfigurations()
         checkForPhotosPermission()
+        self.setNeedsStatusBarAppearanceUpdate()
+      
     }
     
     override func didReceiveMemoryWarning() {
@@ -113,9 +121,25 @@ class FAImageCropperVC: UIViewController {
     
     private func viewConfigurations() {
         
-        navigationBarConfigurations()
+        //navigationBarConfigurations()
         btnCrop.layer.cornerRadius = btnCrop.frame.size.width/2
         btnZoom.layer.cornerRadius = btnZoom.frame.size.width/2
+      
+      
+        globalScrollView.contentSize = CGSize(width: self.view.frame.size.width*2, height: self.globalScrollView.frame.height)
+      
+      
+        let cameraViewFrameOrigin = CGPoint(x: self.view.frame.size.width,y: 0)
+        self.cameraView.frame = CGRect(origin:cameraViewFrameOrigin , size: self.globalScrollView.frame.size)
+      
+        self.cameraView.startSession()
+        self.cameraView.delegate = self
+      
+        self.globalScrollView.addSubview(self.cameraView)
+        self.cameraView.layoutIfNeeded()
+      
+        scrollView.isScrollEnabled = false
+      
     }
     
     private func navigationBarConfigurations() {
@@ -189,8 +213,8 @@ class FAImageCropperVC: UIViewController {
     // MARK: Public Functions
 
     func selectImageFromAssetAtIndex(index:NSInteger){
-      
-      FAImageLoader.imageFrom(asset: photos[index], size: PHImageManagerMaximumSize) { (image) in
+      let targetSize = CGSize(width: (currentAsset?.pixelWidth)!, height: (currentAsset?.pixelHeight)!)
+      FAImageLoader.imageFrom(asset: photos[index], size: targetSize) { (image) in
             DispatchQueue.main.async {
                 self.displayImageInScrollView(image: image)
             }
@@ -323,6 +347,27 @@ class FAImageCropperVC: UIViewController {
             imageViewToDrag.center = location
         }
     }
+
+  
+    // MARK: IBActions
+    @IBAction func librayAction(_ sender: UIButton) {
+      self.arrowImageView.isHidden = false
+      //self.nextButton.isHidden = false
+      //selectAlbumButton.setTitle(albumName, for: .normal)
+      globalScrollView.setContentOffset(CGPoint(x:0, y:0), animated: true)
+      librayButton.setTitleColor(UIColor.white, for: .normal)
+      cameraButton.setTitleColor(UIColor.lightGray, for: .normal)
+    }
+  
+    @IBAction func cameraAction(_ sender: UIButton) {
+      self.arrowImageView.isHidden = true
+      //self.nextButton.isHidden = true
+      //selectAlbumButton.setTitle("Photo", for: .normal)
+      globalScrollView.setContentOffset(CGPoint(x:self.globalScrollView.frame.width, y:0), animated: true)
+      cameraButton.setTitleColor(UIColor.white, for: .normal)
+      librayButton.setTitleColor(UIColor.lightGray, for: .normal)
+    }
+
 }
 
 
@@ -342,7 +387,7 @@ extension FAImageCropperVC:UICollectionViewDataSource{
 }
 
 
-extension FAImageCropperVC:UICollectionViewDelegate{
+extension FAImageCropperVC: UICollectionViewDelegate, FACameraViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
@@ -354,6 +399,12 @@ extension FAImageCropperVC:UICollectionViewDelegate{
         //selectImageFromAssetAtIndex(index: indexPath.item)
         downloadSelectImageFromAssetAtIndex(index: indexPath.item)
     }
+
+  
+    func didShotPhoto(image: UIImage, metaData: [String : Any]) {
+    
+    }
+  
 }
 
 

@@ -14,6 +14,8 @@
 		1AC0195C2028D2210069707C /* FAImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019522028D2210069707C /* FAImageCell.swift */; };
 		1AC0195D2028D2210069707C /* FADetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019562028D2210069707C /* FADetailVC.swift */; };
 		1AC0195E2028D2210069707C /* FAImageCropperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019572028D2210069707C /* FAImageCropperVC.swift */; };
+		1AC019612028DC150069707C /* FACameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019602028DC150069707C /* FACameraView.swift */; };
+		1AC019632028DC3B0069707C /* FACameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC019622028DC3B0069707C /* FACameraView.xib */; };
 		290399801E411D9500CC0C20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2903997F1E411D9500CC0C20 /* AppDelegate.swift */; };
 		290399851E411D9500CC0C20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 290399831E411D9500CC0C20 /* Main.storyboard */; };
 		290399871E411D9500CC0C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 290399861E411D9500CC0C20 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		1AC019522028D2210069707C /* FAImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAImageCell.swift; sourceTree = "<group>"; };
 		1AC019562028D2210069707C /* FADetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FADetailVC.swift; sourceTree = "<group>"; };
 		1AC019572028D2210069707C /* FAImageCropperVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAImageCropperVC.swift; sourceTree = "<group>"; };
+		1AC019602028DC150069707C /* FACameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FACameraView.swift; sourceTree = "<group>"; };
+		1AC019622028DC3B0069707C /* FACameraView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FACameraView.xib; sourceTree = "<group>"; };
 		2903997C1E411D9500CC0C20 /* FAImageCropper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FAImageCropper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2903997F1E411D9500CC0C20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		290399841E411D9500CC0C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 		1AC0194F2028D2210069707C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1AC0195F2028DBE90069707C /* Classes */,
 				1AC019502028D2210069707C /* Cells */,
 				1AC019532028D2210069707C /* Stories */,
 				1AC019542028D2210069707C /* Ressources */,
@@ -145,6 +150,7 @@
 		1AC019542028D2210069707C /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				1AC019622028DC3B0069707C /* FACameraView.xib */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -156,6 +162,14 @@
 				1AC019572028D2210069707C /* FAImageCropperVC.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1AC0195F2028DBE90069707C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1AC019602028DC150069707C /* FACameraView.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		290399731E411D9400CC0C20 = {
@@ -339,6 +353,7 @@
 			files = (
 				2903998A1E411D9500CC0C20 /* LaunchScreen.storyboard in Resources */,
 				290399871E411D9500CC0C20 /* Assets.xcassets in Resources */,
+				1AC019632028DC3B0069707C /* FACameraView.xib in Resources */,
 				1AC0195A2028D2210069707C /* FAGridView.xib in Resources */,
 				290399851E411D9500CC0C20 /* Main.storyboard in Resources */,
 			);
@@ -365,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AC019612028DC150069707C /* FACameraView.swift in Sources */,
 				1AC0195C2028D2210069707C /* FAImageCell.swift in Sources */,
 				2965F1261EE1B42B001F1B5A /* README.md in Sources */,
 				290399801E411D9500CC0C20 /* AppDelegate.swift in Sources */,
