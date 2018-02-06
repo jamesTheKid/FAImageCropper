@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A946254202954790048D397 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A946253202954790048D397 /* UIView+Additions.swift */; };
 		1AC0196F202917B90069707C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC0196E202917B90069707C /* ViewController.swift */; };
 		1AC01972202917B90069707C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC01970202917B90069707C /* Main.storyboard */; };
 		1AC01974202917B90069707C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AC01973202917B90069707C /* Assets.xcassets */; };
@@ -31,9 +32,10 @@
 		1AC019BD20293D300069707C /* FAImageCropperVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC019BC20293D300069707C /* FAImageCropperVC.xib */; };
 		1AC019BF202942E20069707C /* FAImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC019BE202942E20069707C /* FAImageCell.xib */; };
 		1AC019C120294E380069707C /* FAPhotoPickerAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019C020294E380069707C /* FAPhotoPickerAlbumView.swift */; };
-		1AC019C420294E8D0069707C /* FAPhotoPickAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019C220294E8D0069707C /* FAPhotoPickAlbumViewCell.swift */; };
-		1AC019C520294E8D0069707C /* FAPhotoPickAlbumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC019C320294E8D0069707C /* FAPhotoPickAlbumViewCell.xib */; };
+		1AC019C420294E8D0069707C /* FAPhotoPickerAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019C220294E8D0069707C /* FAPhotoPickerAlbumViewCell.swift */; };
+		1AC019C520294E8D0069707C /* FAPhotoPickerAlbumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC019C320294E8D0069707C /* FAPhotoPickerAlbumViewCell.xib */; };
 		1AC019C720294F5E0069707C /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019C620294F5E0069707C /* AlbumModel.swift */; };
+		1AC019C920294FDC0069707C /* FAPhotoPickerAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC019C820294FDC0069707C /* FAPhotoPickerAlbumView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A946253202954790048D397 /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
 		1AC0196A202917B90069707C /* FAImageCropperExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FAImageCropperExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AC0196E202917B90069707C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1AC01971202917B90069707C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,9 +78,10 @@
 		1AC019BC20293D300069707C /* FAImageCropperVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAImageCropperVC.xib; sourceTree = "<group>"; };
 		1AC019BE202942E20069707C /* FAImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAImageCell.xib; sourceTree = "<group>"; };
 		1AC019C020294E380069707C /* FAPhotoPickerAlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPhotoPickerAlbumView.swift; sourceTree = "<group>"; };
-		1AC019C220294E8D0069707C /* FAPhotoPickAlbumViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPhotoPickAlbumViewCell.swift; sourceTree = "<group>"; };
-		1AC019C320294E8D0069707C /* FAPhotoPickAlbumViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAPhotoPickAlbumViewCell.xib; sourceTree = "<group>"; };
+		1AC019C220294E8D0069707C /* FAPhotoPickerAlbumViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPhotoPickerAlbumViewCell.swift; sourceTree = "<group>"; };
+		1AC019C320294E8D0069707C /* FAPhotoPickerAlbumViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAPhotoPickerAlbumViewCell.xib; sourceTree = "<group>"; };
 		1AC019C620294F5E0069707C /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		1AC019C820294FDC0069707C /* FAPhotoPickerAlbumView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAPhotoPickerAlbumView.xib; sourceTree = "<group>"; };
 		290399941E411D9500CC0C20 /* FAImageCropperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAImageCropperTests.swift; sourceTree = "<group>"; };
 		290399961E411D9500CC0C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2903999F1E411D9500CC0C20 /* FAImageCropperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAImageCropperUITests.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				1AC0198E20292EBC0069707C /* UIImage+Additions.swift */,
+				1A946253202954790048D397 /* UIView+Additions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -201,7 +206,7 @@
 				1AC019B8202935C70069707C /* FALibraryView.swift */,
 				1AC019BA202939490069707C /* FALibraryView+Additions.swift */,
 				1AC019C020294E380069707C /* FAPhotoPickerAlbumView.swift */,
-				1AC019C220294E8D0069707C /* FAPhotoPickAlbumViewCell.swift */,
+				1AC019C220294E8D0069707C /* FAPhotoPickerAlbumViewCell.swift */,
 				1AC019C620294F5E0069707C /* AlbumModel.swift */,
 			);
 			path = Classes;
@@ -217,11 +222,12 @@
 		1AC019A220292EBC0069707C /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
-				1AC019C320294E8D0069707C /* FAPhotoPickAlbumViewCell.xib */,
+				1AC019C320294E8D0069707C /* FAPhotoPickerAlbumViewCell.xib */,
 				1AC019A320292EBC0069707C /* FACameraView.xib */,
 				1AC019B6202935B70069707C /* FALibraryView.xib */,
 				1AC019BC20293D300069707C /* FAImageCropperVC.xib */,
 				1AC019BE202942E20069707C /* FAImageCell.xib */,
+				1AC019C820294FDC0069707C /* FAPhotoPickerAlbumView.xib */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -356,10 +362,11 @@
 				1AC01972202917B90069707C /* Main.storyboard in Resources */,
 				1AC019BD20293D300069707C /* FAImageCropperVC.xib in Resources */,
 				1AC019B7202935B70069707C /* FALibraryView.xib in Resources */,
-				1AC019C520294E8D0069707C /* FAPhotoPickAlbumViewCell.xib in Resources */,
+				1AC019C520294E8D0069707C /* FAPhotoPickerAlbumViewCell.xib in Resources */,
 				1AC019BF202942E20069707C /* FAImageCell.xib in Resources */,
 				1AC019B220292EBC0069707C /* FACameraView.xib in Resources */,
 				1AC019A720292EBC0069707C /* FAGridView.xib in Resources */,
+				1AC019C920294FDC0069707C /* FAPhotoPickerAlbumView.xib in Resources */,
 				1AC019A920292EBC0069707C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,8 +387,9 @@
 			files = (
 				1AC019A820292EBC0069707C /* FAScrollView.swift in Sources */,
 				1AC019C720294F5E0069707C /* AlbumModel.swift in Sources */,
-				1AC019C420294E8D0069707C /* FAPhotoPickAlbumViewCell.swift in Sources */,
+				1AC019C420294E8D0069707C /* FAPhotoPickerAlbumViewCell.swift in Sources */,
 				1AC019BB202939490069707C /* FALibraryView+Additions.swift in Sources */,
+				1A946254202954790048D397 /* UIView+Additions.swift in Sources */,
 				1AC019AC20292EBC0069707C /* FADetailVC.swift in Sources */,
 				1AC019A520292EBC0069707C /* FAImageLoader.swift in Sources */,
 				1AC019AF20292EBC0069707C /* FACameraView+Additions.swift in Sources */,
