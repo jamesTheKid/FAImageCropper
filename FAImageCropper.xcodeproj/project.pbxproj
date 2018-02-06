@@ -22,12 +22,18 @@
 		1AC019AE20292EBC0069707C /* FAImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC0199B20292EBC0069707C /* FAImageCell.swift */; };
 		1AC019AF20292EBC0069707C /* FACameraView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC0199D20292EBC0069707C /* FACameraView+Additions.swift */; };
 		1AC019B020292EBC0069707C /* FACameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC0199E20292EBC0069707C /* FACameraView.swift */; };
-		1AC019B120292EBC0069707C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC019A020292EBC0069707C /* Main.storyboard */; };
 		1AC019B220292EBC0069707C /* FACameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC019A320292EBC0069707C /* FACameraView.xib */; };
 		1AC019B320292EBC0069707C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AC019A420292EBC0069707C /* Info.plist */; };
 		1AC019B5202934B00069707C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019B4202934AF0069707C /* AppDelegate.swift */; };
 		1AC019B7202935B70069707C /* FALibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC019B6202935B70069707C /* FALibraryView.xib */; };
 		1AC019B9202935C70069707C /* FALibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019B8202935C70069707C /* FALibraryView.swift */; };
+		1AC019BB202939490069707C /* FALibraryView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019BA202939490069707C /* FALibraryView+Additions.swift */; };
+		1AC019BD20293D300069707C /* FAImageCropperVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC019BC20293D300069707C /* FAImageCropperVC.xib */; };
+		1AC019BF202942E20069707C /* FAImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC019BE202942E20069707C /* FAImageCell.xib */; };
+		1AC019C120294E380069707C /* FAPhotoPickerAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019C020294E380069707C /* FAPhotoPickerAlbumView.swift */; };
+		1AC019C420294E8D0069707C /* FAPhotoPickAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019C220294E8D0069707C /* FAPhotoPickAlbumViewCell.swift */; };
+		1AC019C520294E8D0069707C /* FAPhotoPickAlbumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AC019C320294E8D0069707C /* FAPhotoPickAlbumViewCell.xib */; };
+		1AC019C720294F5E0069707C /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC019C620294F5E0069707C /* AlbumModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,12 +66,18 @@
 		1AC0199B20292EBC0069707C /* FAImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAImageCell.swift; sourceTree = "<group>"; };
 		1AC0199D20292EBC0069707C /* FACameraView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FACameraView+Additions.swift"; sourceTree = "<group>"; };
 		1AC0199E20292EBC0069707C /* FACameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FACameraView.swift; sourceTree = "<group>"; };
-		1AC019A120292EBC0069707C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AC019A320292EBC0069707C /* FACameraView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FACameraView.xib; sourceTree = "<group>"; };
 		1AC019A420292EBC0069707C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AC019B4202934AF0069707C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AC019B6202935B70069707C /* FALibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FALibraryView.xib; sourceTree = "<group>"; };
 		1AC019B8202935C70069707C /* FALibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FALibraryView.swift; sourceTree = "<group>"; };
+		1AC019BA202939490069707C /* FALibraryView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FALibraryView+Additions.swift"; sourceTree = "<group>"; };
+		1AC019BC20293D300069707C /* FAImageCropperVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAImageCropperVC.xib; sourceTree = "<group>"; };
+		1AC019BE202942E20069707C /* FAImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAImageCell.xib; sourceTree = "<group>"; };
+		1AC019C020294E380069707C /* FAPhotoPickerAlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPhotoPickerAlbumView.swift; sourceTree = "<group>"; };
+		1AC019C220294E8D0069707C /* FAPhotoPickAlbumViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPhotoPickAlbumViewCell.swift; sourceTree = "<group>"; };
+		1AC019C320294E8D0069707C /* FAPhotoPickAlbumViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAPhotoPickAlbumViewCell.xib; sourceTree = "<group>"; };
+		1AC019C620294F5E0069707C /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 		290399941E411D9500CC0C20 /* FAImageCropperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAImageCropperTests.swift; sourceTree = "<group>"; };
 		290399961E411D9500CC0C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2903999F1E411D9500CC0C20 /* FAImageCropperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAImageCropperUITests.swift; sourceTree = "<group>"; };
@@ -187,6 +199,10 @@
 				1AC0199D20292EBC0069707C /* FACameraView+Additions.swift */,
 				1AC0199E20292EBC0069707C /* FACameraView.swift */,
 				1AC019B8202935C70069707C /* FALibraryView.swift */,
+				1AC019BA202939490069707C /* FALibraryView+Additions.swift */,
+				1AC019C020294E380069707C /* FAPhotoPickerAlbumView.swift */,
+				1AC019C220294E8D0069707C /* FAPhotoPickAlbumViewCell.swift */,
+				1AC019C620294F5E0069707C /* AlbumModel.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -194,7 +210,6 @@
 		1AC0199F20292EBC0069707C /* Stories */ = {
 			isa = PBXGroup;
 			children = (
-				1AC019A020292EBC0069707C /* Main.storyboard */,
 			);
 			path = Stories;
 			sourceTree = "<group>";
@@ -202,8 +217,11 @@
 		1AC019A220292EBC0069707C /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				1AC019C320294E8D0069707C /* FAPhotoPickAlbumViewCell.xib */,
 				1AC019A320292EBC0069707C /* FACameraView.xib */,
 				1AC019B6202935B70069707C /* FALibraryView.xib */,
+				1AC019BC20293D300069707C /* FAImageCropperVC.xib */,
+				1AC019BE202942E20069707C /* FAImageCell.xib */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -332,12 +350,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AC019B120292EBC0069707C /* Main.storyboard in Resources */,
 				1AC01977202917B90069707C /* LaunchScreen.storyboard in Resources */,
 				1AC019B320292EBC0069707C /* Info.plist in Resources */,
 				1AC01974202917B90069707C /* Assets.xcassets in Resources */,
 				1AC01972202917B90069707C /* Main.storyboard in Resources */,
+				1AC019BD20293D300069707C /* FAImageCropperVC.xib in Resources */,
 				1AC019B7202935B70069707C /* FALibraryView.xib in Resources */,
+				1AC019C520294E8D0069707C /* FAPhotoPickAlbumViewCell.xib in Resources */,
+				1AC019BF202942E20069707C /* FAImageCell.xib in Resources */,
 				1AC019B220292EBC0069707C /* FACameraView.xib in Resources */,
 				1AC019A720292EBC0069707C /* FAGridView.xib in Resources */,
 				1AC019A920292EBC0069707C /* Assets.xcassets in Resources */,
@@ -359,11 +379,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AC019A820292EBC0069707C /* FAScrollView.swift in Sources */,
+				1AC019C720294F5E0069707C /* AlbumModel.swift in Sources */,
+				1AC019C420294E8D0069707C /* FAPhotoPickAlbumViewCell.swift in Sources */,
+				1AC019BB202939490069707C /* FALibraryView+Additions.swift in Sources */,
 				1AC019AC20292EBC0069707C /* FADetailVC.swift in Sources */,
 				1AC019A520292EBC0069707C /* FAImageLoader.swift in Sources */,
 				1AC019AF20292EBC0069707C /* FACameraView+Additions.swift in Sources */,
 				1AC019B020292EBC0069707C /* FACameraView.swift in Sources */,
 				1AC019A620292EBC0069707C /* UIImage+Additions.swift in Sources */,
+				1AC019C120294E380069707C /* FAPhotoPickerAlbumView.swift in Sources */,
 				1AC0196F202917B90069707C /* ViewController.swift in Sources */,
 				1AC019AD20292EBC0069707C /* FAImageCropperVC.swift in Sources */,
 				1AC019B9202935C70069707C /* FALibraryView.swift in Sources */,
@@ -405,14 +429,6 @@
 				1AC01976202917B90069707C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		1AC019A020292EBC0069707C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1AC019A120292EBC0069707C /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
