@@ -9,10 +9,12 @@
 import UIKit
 import Photos
 
+public protocol FAImageCropperVCrDelegate {
+  func didFinishPickingPhoto(image: UIImage, metaData: [String: Any])
+  func didCancelPickingPhoto()
+}
 class FAImageCropperVC: UIViewController {
   
-  
-    
     // MARK: IBOutlets
   
     @IBOutlet weak var globalScrollView: UIScrollView!
@@ -28,10 +30,7 @@ class FAImageCropperVC: UIViewController {
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var librayButton: UIButton!
   
-  
-  
     // MARK: Public Properties
-  
   
     var didSetupConstraint = false
     var albumName: String!
@@ -274,15 +273,6 @@ extension FAImageCropperVC:  FACameraViewDelegate, FAPhotoPickerAlbumViewDelegat
     
     selectedAlbumButton.updateConstraint(attribute: .width, value: (contentSize?.width)!)
     libraryView.albumSelected(fetchResult: album.assets)
-    /*
-    library.images = album.assets
-    library.collectionView.reloadData()
-    library.collectionView.selectItem(at: IndexPath.init(row: 0, section: 0), animated: false, scrollPosition: .bottom)
-    album.fetchFirstImage { (image) in
-      self.library.setupFirstLoadingImageAttribute(image: image)
-      
-    }
-    */
     
     UIView.animate(withDuration: 0.3, animations: {
       self.albumView.frame = CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: self.view.frame.height - 44.0)
