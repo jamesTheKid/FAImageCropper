@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Photos
 
 typealias Success = (_ photos:[PHAsset])->Void
 

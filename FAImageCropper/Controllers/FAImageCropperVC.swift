@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 class FAImageCropperVC: UIViewController {
   
@@ -14,6 +15,7 @@ class FAImageCropperVC: UIViewController {
     // MARK: IBOutlets
     
     @IBOutlet weak var scrollContainerView: UIView!
+  
     @IBOutlet weak var scrollView: FAScrollView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var btnZoom: UIButton!
@@ -22,6 +24,7 @@ class FAImageCropperVC: UIViewController {
     @IBOutlet weak var globalScrollView: UIScrollView!
     @IBOutlet weak var selectedAlbumButton: UIButton!
     @IBOutlet weak var arrowImageView: UIImageView!
+  
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var librayButton: UIButton!
   
@@ -122,24 +125,26 @@ class FAImageCropperVC: UIViewController {
     
     private func viewConfigurations() {
         
-        //navigationBarConfigurations()
-        btnCrop.layer.cornerRadius = btnCrop.frame.size.width/2
-        btnZoom.layer.cornerRadius = btnZoom.frame.size.width/2
+    
+    
+      globalScrollView.contentSize = CGSize(width: self.view.frame.size.width*2, height: self.globalScrollView.frame.height)
+    
+    
+      let cameraViewFrameOrigin = CGPoint(x: self.view.frame.size.width,y: 0)
+      self.cameraView.frame = CGRect(origin:cameraViewFrameOrigin , size: self.globalScrollView.frame.size)
+    
+      self.cameraView.startSession()
+      self.cameraView.delegate = self
+    
+      self.globalScrollView.addSubview(self.cameraView)
+      self.cameraView.layoutIfNeeded()
+    
+      scrollView.isScrollEnabled = false
       
+      //navigationBarConfigurations()
+      btnCrop.layer.cornerRadius = btnCrop.frame.size.width/2
+      btnZoom.layer.cornerRadius = btnZoom.frame.size.width/2
       
-        globalScrollView.contentSize = CGSize(width: self.view.frame.size.width*2, height: self.globalScrollView.frame.height)
-      
-      
-        let cameraViewFrameOrigin = CGPoint(x: self.view.frame.size.width,y: 0)
-        self.cameraView.frame = CGRect(origin:cameraViewFrameOrigin , size: self.globalScrollView.frame.size)
-      
-        self.cameraView.startSession()
-        self.cameraView.delegate = self
-      
-        self.globalScrollView.addSubview(self.cameraView)
-        self.cameraView.layoutIfNeeded()
-      
-        scrollView.isScrollEnabled = false
       
     }
     

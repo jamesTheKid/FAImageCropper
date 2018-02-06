@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Photos
 
 public let FAImagePlaceHolderSize: CGSize = CGSize(width: 100.0, height: 100.0)
 
